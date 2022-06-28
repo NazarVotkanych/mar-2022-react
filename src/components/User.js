@@ -7,7 +7,7 @@ const User = ({item, getUserId}) => {
             <h2>
                 {item.id} - {item.name}
             </h2>
-            <button onClick={(onClick) => getUserId(item)}> Get Post </button>
+            <button onClick={() => getUserId(item)}> Get Post </button>
         </div>
     );
 };

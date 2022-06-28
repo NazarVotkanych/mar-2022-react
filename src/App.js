@@ -17,8 +17,7 @@ const App = () => {
     return (
         <div>
          <Users getUserId={getUserId}/>
-
-            {posts && <Posts posts={posts}/>}
+            {posts && <Posts posts={posts} />}
         </div>
     );
 };
