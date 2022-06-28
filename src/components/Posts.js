@@ -1,11 +1,11 @@
-import React from 'react';
-import Post from "./Post";
-
 
 const Posts = ({posts}) => {
     return (
         <div>
-            {posts.map(post => <Post key={post.id} getUserId={getUserId}/>)}
+            {posts.map(value => <div key={value.id}>
+                {value.id}
+                {value.title}
+            </div>)}
         </div>
     );
 };
