@@ -5,6 +5,8 @@ const Posts = ({posts}) => {
             {posts.map(value => <div key={value.id}>
                 {value.id}
                 {value.title}
+                {value.body}
+
             </div>)}
         </div>
     );

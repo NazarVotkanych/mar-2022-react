@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import User from "./User";
 import {userService} from "../services/users.api.service";
 
-const Users = () => {
+const Users = ({getUserId}) => {
     let [users, setUsers] = useState([]);
 
     useEffect(() => {
@@ -11,7 +11,7 @@ const Users = () => {
 
     return (
         <div>
-            {users.map(value => <User
+            {users.map(value => <User getUserId={getUserId}
             key={value.id}
             item={value}
             />)}
@@ -19,5 +19,4 @@ const Users = () => {
         </div>
     );
 };
-
 export default Users;
