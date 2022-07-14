@@ -5,13 +5,13 @@ import PostsComponents from "./PostsComponents";
 
 const PostCurrent = () => {
 
-    const {id} = useParams();
+    const {postId} = useParams();
 
     const [posts, setPosts] = useState([]);
 
     useEffect(()=>{
-        urlService.getByID(id).then(value => setPosts([{...value}]))
-    },[id])
+        urlService.getByID(postId).then(value => setPosts([...value]))
+    },[postId])
 
     return (
         <div>
