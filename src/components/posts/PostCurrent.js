@@ -7,16 +7,18 @@ const PostCurrent = () => {
 
     const {postId} = useParams();
 
-    const [posts, setPosts] = useState([]);
+    const [post, setPosts] = useState(null);
 
     useEffect(()=>{
-        urlService.getByID(postId).then(value => setPosts([...value]))
+        urlService.getByID(postId).then(value => setPosts(value))
     },[postId])
 
     return (
         <div>
             {
-                posts.map(value => <PostsComponents item={value} key={value.id}/>)
+                post
+                ? <PostsComponents item={post}/>
+                : 'Loading....'
             }
         </div>
     );
